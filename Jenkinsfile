@@ -5,7 +5,6 @@ node{
    stage('Compile-Package'){
       // Get maven home path
       echo "executing maven package"
-          mvn package
    }
    stage('Email Notification'){
       mail bcc: '', body: '''Hi Welcome to jenkins email alerts
