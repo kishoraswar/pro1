@@ -1,10 +1,13 @@
 node{
    stage('SCM Checkout'){
-     git 'https://github.com/javahometech/my-app'
+     git 'https://github.com/kishoraswar/pro1'
    }
    stage('Compile-Package'){
       // Get maven home path
       echo "executing maven package"
+      def mvnHome = tool name: 'maven', type: 'maven'
+     
+      
    }
    stage('Email Notification'){
       mail bcc: '', body: '''Hi Welcome to jenkins email alerts
