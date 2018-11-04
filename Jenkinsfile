@@ -5,7 +5,7 @@ node{
    stage('Compile-Package'){
       // Get maven home path
       echo "executing maven package"
-      
+      def mvnHome =  tool name: 'maven', type: 'maven'   
          bat(/"${mvnHome}\bin\mvn" -Dmaven.test.failure.ignore clean package/)     
       
    }
