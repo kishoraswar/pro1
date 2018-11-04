@@ -5,7 +5,7 @@ node{
    stage('Compile-Package'){
       // Get maven home path
       echo "executing maven package"
-   def mvnHome =  D:\DEVOPS\Required Software\apache-maven-3.5.4
+   def mvnHome = "D:\DEVOPS\Required Software\apache-maven-3.5.4"
        "%mvnHome%\bin\mvn package"
    }
    stage('Email Notification'){
