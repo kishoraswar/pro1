@@ -4,8 +4,9 @@ node{
    }
    stage('Compile-Package'){
       // Get maven home path
-      def mvnHome =  tool name: 'maven', type: 'maven'
-      sh "${mvnHome}/bin/mvn package"
+      echo "executing maven package"
+     D:\DEVOPS\Required Software\apache-maven-3.5.4
+       "${mvnHome}\bin\mvn package"
    }
    stage('Email Notification'){
       mail bcc: '', body: '''Hi Welcome to jenkins email alerts
