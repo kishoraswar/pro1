@@ -11,13 +11,12 @@ node{
    
      stage('Coverage report')
    {
-      echo "code coverage"
-      sonar.projectKey=WEZVA
-      sonar.projectName=SonarDemo
-      sonar.projectVersion=1.0
-      sonar.source=src
-      sonar.javabinaries=target\\classes
-      sonar.jacoco.reportPath=target\\coverage-reports\\jacoco-unit.exec
+    sonar.projectKey=WEZVA
+sonar.projectName=SonarDemo
+sonar.projectVersion=1.0
+sonar.source=src
+sonar.javabinaries=bat (/"target\classes"/)
+sonar.jacoco.reportPath=bat(/"target\coverage-reports\jacoco-unit.exec"/)
    }
    
     }
