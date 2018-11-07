@@ -10,13 +10,15 @@ node{
          }
    
      stage('Coverage report')
-   {
-    sonar.projectKey=WEZVA
+        {
+           withSonarQubeEnv {
+              sonar.projectKey=WEZVA
 sonar.projectName=SonarDemo
 sonar.projectVersion=1.0
 sonar.source=src
 sonar.javabinaries=bat (/"target\classes"/)
 sonar.jacoco.reportPath=bat(/"target\coverage-reports\jacoco-unit.exec"/)
-   }
-   
-    }
+    // some block
+          }
+  }
+}
